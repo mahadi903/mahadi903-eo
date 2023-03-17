@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Odd or Even Generator</title>
+</head>
+<body>
+	<h1>Odd or Even Generator</h1>
+	<form action="oddoreven.cgi" method="post">
+		<label for="digit">Enter a digit:</label>
+		<input type="text" id="digit" name="digit">
+		<input type="submit" value="Generate">
+	</form>
+
+	<p>
+		<?php
+			$digit = $_POST["digit"];
+			if ($digit % 2 == 0)
+			{
+				echo "$digit is even.";
+			}
+			else
+			{
+				echo "$digit is odd.";
+			}
+		?>
+	</p>
+</body>
+</html>
